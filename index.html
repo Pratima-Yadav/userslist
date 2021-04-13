@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header"><h1>Users List<i class="fas fa-users"></i></h1></div>
+    
+                <form class="form-popup" id="myForm"  onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="nameValidationError">This field is required.</label>
+                        <input type="text" name="name" id="name" >
+                    </div>
+                    <div>
+                           
+                        <input type="hidden" name="id" id="id" >
+                    </div>
+                    <div>
+                        <label>city</label><br>
+                        <select id="city" name="city" >
+                            <option value="" disabled selected hidden>Choose City</option>
+                            <option value="Bengaluru">Bengaluru</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                          </select>
+                    </div>
+                    <div>
+                        <label>degree</label>
+                        <input type="text" name="degree" id="degree" >
+                    </div>
+                    <div>
+                       
+                        <name="timestamp" id="timestamp" cols="5" rows="20" style="display:none;">           
+                           </div>
+                    <div  class="form-action-buttons">
+                        <input onclick="closeForm()" type="submit" value="Save" >
+                    </div>
+                </form>
+            
+                <table class="list" id="employeeList">
+                    <thead id="false">
+                        <tr>
+                            <button class="open-button" onclick="openForm()">Add User +</button>
+                            <th>Full Name</th>
+                            <th>id</th>
+                            <th>city</th>
+                            <th>degree</th>
+                            <th>timestamp</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+           
+       
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
